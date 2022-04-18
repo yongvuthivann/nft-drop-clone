@@ -19,8 +19,8 @@ function NFTDropPage() {
                     <img className="w-44 rounded-xl object-cover lg:h-96 lg:w-72" src="https://links.papareact.com/8sg" alt="" />
                 </div>
                 <div className="text-center p-5 space-y-2">
-                    <h1 className="text-4xl font-bold text-white">PAPAFAM APES</h1>
-                    <h2 className="text-xl text-gray-300">A collection of PAPAFAM Apes who live & breathe React!</h2>
+                    <h1 className="text-4xl font-bold text-white">QUICK APES</h1>
+                    <h2 className="text-xl text-gray-300">One Amoung The Team who live & breathe React!</h2>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@ function NFTDropPage() {
             {/* Content */}
             <div className='mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:justify-center lg:space-y-0'>
                 <img className="object-cover w-80 pb-10 lg:h-40" src="https://links.papareact.com/bdy" alt="" />
-                <h1 className="font-bold text-3xl lg:text-5xl lg:font-extrabold">The PapaFam ape Coding CLub | NFT Drop</h1>
+                <h1 className="font-bold text-3xl lg:text-5xl lg:font-extrabold">The QuIcK's ape Coding CLub | NFT Drop</h1>
                 <p className="pt-2 text-xl text-green-500">13 / 21 NFT's clamied</p>
             </div>
 
