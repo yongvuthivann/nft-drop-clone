@@ -20,12 +20,10 @@ interface Props {
 const Home = ({collections}: Props) => {
   return (
     <Container>
-      {/* <div className="mx-auto max-w-7xl px-8 sm:px-16"> */}
         <div className="grid flex-grow items-center gap-0 pb-12 md:grid-cols-2 md:gap-24 md:pb-48 md:pt-24">
           <div className="col-span-1 mb-12 mt-16 flex flex-col space-y-6 rounded-xl text-center md:mb-0 md:text-left  lg:justify-center lg:space-y-2">
-            <h1 className="font-poppins text-3xl font-extralight dark:text-white  md:max-w-md md:text-6xl">
-              The best <span className="font-bold text-purple-500">NFTS</span> in
-              one place
+            <h1 className="font-poppins text-3xl font-extralight dark:text-white  md:max-w-xl md:text-6xl">
+              Coding Club <span className="font-bold text-purple-500">NFTS</span> Drop
             </h1>
           </div>
           <div className="col-span-1">
@@ -99,7 +97,6 @@ const Home = ({collections}: Props) => {
             </div>
           </div>
         </div>
-      {/* </div> */}
     </Container>
   )
 }
