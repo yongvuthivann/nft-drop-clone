@@ -22,7 +22,7 @@ function Container({children}: Props) {
   return (
     <>
         <Head>
-          <title>NTF Drop</title>
+          <title>NFT Drop</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="min-h-screen bg-white dark:bg-black">
