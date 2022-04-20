@@ -98,15 +98,15 @@ const Home = ({collections}: Props) => {
             </div>
           </div>
         </div>
-      
+      {/* grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 */}
         <main className='pt-12 pb-24'>
           <div className='group relative'>
             <div className="animate-tilt group-hover:duration-600 absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-600 to-blue-500 opacity-30 blur transition duration-1000 group-hover:opacity-80"></div>
-            <div className="relative flex items-center justify-between space-x-4 divide-gray-600 rounded-xl bg-white px-1.5 leading-none text-blue-200  transition duration-200 hover:text-purple-300 dark:bg-black sm:p-2">
-              <div className="grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3">
+            <div className="relative divide-gray-600 rounded-xl bg-white px-1.5 leading-none text-blue-200  transition duration-200 hover:text-purple-300 dark:bg-black">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 items-center">
                 {collections.map(collection => (
                   <Link key={collection._id} href={`/nft/${collection.slug.current}`}>
-                    <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
+                    <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105 mt-3">
                       <img className="w-44 rounded-xl object-cover lg:h-56 lg:w-56" src={urlFor(collection.previewImage).url()} alt="" />
                       <div className='flex flex-col items-center'>
                         <h2 className="font-poppins text-xl text-amber-300 mt-2 dark:text-amber-300">{collection.title}</h2>
@@ -117,8 +117,8 @@ const Home = ({collections}: Props) => {
                   </Link>
                 ))}
               </div>
-            </div> 
-          </div>
+            </div>         
+          </div> 
         </main>
     </Container>
   )
