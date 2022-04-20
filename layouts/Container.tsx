@@ -97,7 +97,6 @@ function Container({children}: Props) {
                 </header>
               {children}
           </div>
-
         </div>
       </div>
     </>
