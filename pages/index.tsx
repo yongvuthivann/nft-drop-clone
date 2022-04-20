@@ -107,8 +107,8 @@ const Home = ({collections}: Props) => {
                 {collections.map(collection => (
                   <Link key={collection._id} href={`/nft/${collection.slug.current}`}>
                     <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105">
-                      <img className="h-96 w-60" src={urlFor(collection.previewImage).url()} alt="" />
-                      <div>
+                      <img className="w-44 rounded-xl object-cover lg:h-96 lg:w-72" src={urlFor(collection.previewImage).url()} alt="" />
+                      <div className='flex flex-col items-center'>
                         <h2 className="font-poppins text-xl text-amber-300 mt-2 dark:text-amber-300">{collection.title}</h2>
                         <p className="mt-2 font-poppins font-extralight text-black dark:text-white sm:block tracking-wider;">{collection.description}</p>
                         <p className="mt-2 font-poppins font-medium text-purple-600 dark:text-purple-400">{collection.nftCollectionName}</p>
