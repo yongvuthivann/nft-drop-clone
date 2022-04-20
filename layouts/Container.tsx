@@ -26,7 +26,7 @@ function Container({children}: Props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="min-h-screen bg-white dark:bg-black">
-        <div className="to-blue-400[0.35] dark:to-blue-400[0.25] bg-gradient-to-tr from-purple-400/[0.35] dark:from-purple-400/[0.15">
+        <div className="to-blue-400[0.35] dark:to-blue-400[0.25] bg-gradient-to-tr from-purple-400/[0.35] dark:from-purple-400/[0.15]">
           <div className="mx-auto flex min-h-screen max-w-7xl flex-col p-8">
             <header className="flex flex-col items-center justify-between border-b border-pink-400/[0.15] pb-8 md:flex-row md:pb-10">
                 <Link href="/">
@@ -39,8 +39,8 @@ function Container({children}: Props) {
                   </h1>
                 </Link>
 
-                <div>
-                  <div>
+                <div className="mt-6 flex flex-col items-center space-y-4 md:mt-0 md:space-y-0">
+                  <div className="flex items-center">
                   {mounted && (
                   <>
                     {theme === 'dark' ? (
