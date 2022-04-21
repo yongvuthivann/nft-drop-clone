@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-
+import {useAddress, useDisconnect, useMetamask} from '@thirdweb-dev/react'
 import Head from 'next/head'
 import Link from 'next/link'
 import {useTheme} from 'next-themes'
+import Button from '../components/Button'
 
 
 interface Props {
@@ -13,6 +14,12 @@ function Container({children}: Props) {
 
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+
+  const connectWithMetamask = useMetamask()
+  const address = useAddress()
+  const disconnect = useDisconnect()
+  // --------
+  console.log(address)
 
   useEffect(() => {
     setMounted(true)
@@ -40,7 +47,43 @@ function Container({children}: Props) {
                 </Link>
 
                 <div className="mt-6 flex flex-col items-center space-y-4 md:mt-0 md:space-y-0">
-                  <div className="flex items-center">
+                  <div className="flex items-center space-x-5">
+                    <button onClick={() => address ? disconnect() : connectWithMetamask()}>
+                      <Button icon={                          
+                        address ? (
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                            />
+                          </svg>
+                          ):(
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                            />
+                          </svg>
+                          )
+                        }
+                        text={address ? 'Sign Out': 'Sing In'}/>
+                    </button>
                   {mounted && (
                   <>
                     {theme === 'dark' ? (
@@ -95,7 +138,12 @@ function Container({children}: Props) {
                   </div>
                 </div>
                 </header>
-              {children}
+                <div className="flex items-center justify-center pt-2">
+                  {address && (
+                      <p className='font-poppins text-amber-500 dark:text-amber-400 text-sm'>You are logged in with wallet {address.substring(0, 5)}...{address.substring(address.length - 5)}</p>
+                    )}
+                </div>
+                {children}
           </div>
         </div>
       </div>

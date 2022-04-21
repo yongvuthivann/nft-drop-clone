@@ -99,7 +99,7 @@ const Home = ({collections}: Props) => {
           </div>
         </div>
       {/* grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 */}
-        <main className='flex flex-col pt-12 pb-24 items-center'>
+        <main className='flex flex-col pt-14 pb-24 items-center'>
           <div className="flex items-center pb-8">
             <h1 className="font-bold text-5xl font-poppins tracking-tight">Explore{' '}<span className="font-extrabold text-purple-500">NFTs</span></h1>
           </div>
