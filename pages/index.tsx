@@ -99,7 +99,7 @@ const Home = ({collections}: Props) => {
           </div>
         </div>
       {/* grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 */}
-        <main className='pt-32 pb-24'>
+        <main className='pt-40 pb-24'>
           <div className='group relative'>
             <div className="animate-tilt group-hover:duration-600 absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-600 to-blue-500 opacity-30 blur transition duration-1000 group-hover:opacity-80"></div>
             <div className="relative divide-gray-600 rounded-xl bg-white px-1.5 leading-none text-blue-200  transition duration-200 hover:text-purple-300 dark:bg-black">
