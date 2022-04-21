@@ -99,11 +99,14 @@ const Home = ({collections}: Props) => {
           </div>
         </div>
       {/* grid space-x-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 */}
-        <main className='pt-40 pb-24'>
+        <main className='flex flex-col pt-12 pb-24 items-center'>
+          <div className="flex items-center pb-8">
+            <h1 className="font-bold text-5xl font-poppins tracking-tight">Explore{' '}<span className="font-extrabold text-purple-500">NFTs</span></h1>
+          </div>
           <div className='group relative'>
             <div className="animate-tilt group-hover:duration-600 absolute -inset-0.5 rounded-xl bg-gradient-to-r from-purple-600 to-blue-500 opacity-30 blur transition duration-1000 group-hover:opacity-80"></div>
             <div className="relative divide-gray-600 rounded-xl bg-white px-1.5 leading-none text-blue-200  transition duration-200 hover:text-purple-300 dark:bg-black">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 p-3 items-center">
+              <div className="grid md:grid-cols-2 gap-8 lg:grid-cols-3 2xl:grid-cols-4 p-8 md:p-12 items-center">
                 {collections.map(collection => (
                   <Link key={collection._id} href={`/nft/${collection.slug.current}`}>
                     <div className="flex flex-col items-center cursor-pointer transition-all duration-200 hover:scale-105 mt-3">
